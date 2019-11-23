@@ -3,10 +3,14 @@ skyex package
 How to install the package?
 
 1. Open Rstudio
-2. install.packages("devtools")
-3. library(devtools)
-4. install_github("suelai/skyex")
-5. library(skyex)
+2. Run: 
+
+```
+install.packages("devtools")
+library(devtools)
+install_github("suelai/skyex")
+library(skyex)
+```
 
 And that was it! :)
 
@@ -20,21 +24,22 @@ APA
 
 Includes 16 functions:
 
-Module	                              Function name
-Blocking	                            textual_blocking
-Blocking	                            spatial_blockcing
-Blocking	                            prefix_blocking
-Blocking	                            suffix_blocking
-Pairwise comparison	                  text_similarity
-Pairwise comparison	                  spatial_similarity
-Pairwise comparison	                  semantic_similarity
-Labeling	                            skyexf
-Labeling	                            skyexd
-Analysis and visualization	          plot.skyexf.cutoffs
-Analysis and visualization	          plot.skyexd.cutoffs
-Analysis and visualization	          plot.skyexd.smooth
-Analysis and visualization	          evaluate.skyex
-Analysis and visualization	          plot.pairs2D
-Analysis and visualization	          plot.pairs3D
-Analysis and visualization	          plot.pairs.interactive.3D
+|Module	                 |               Function name |
+| --- | --- |
+|Blocking	               |             textual_blocking |
+|Blocking	               |             spatial_blockcing |
+|Blocking	               |             prefix_blocking |
+|Blocking	               |             suffix_blocking |
+|Pairwise comparison	   |               text_similarity |
+|Pairwise comparison	   |               spatial_similarity |
+|Pairwise comparison	   |               semantic_similarity |
+|Labeling	               |             skyexf |
+|Labeling	               |             skyexd |
+|Analysis and visualization	 |         plot.skyexf.cutoffs |
+|Analysis and visualization	 |         plot.skyexd.cutoffs |
+|Analysis and visualization	 |         plot.skyexd.smooth |
+|Analysis and visualization	 |         evaluate.skyex |
+|Analysis and visualization	 |         plot.pairs2D |
+|Analysis and visualization	 |         plot.pairs3D |
+|Analysis and visualization	 |         plot.pairs.interactive.3D |
 
