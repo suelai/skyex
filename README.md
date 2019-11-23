@@ -14,7 +14,7 @@ library(skyex)
 
 And that was it! :)
 
-includes two datasets: pairsManual https://dl.acm.org/citation.cfm?id=3340979
+includes two datasets: pairsManual https://dl.acm.org/citation.cfm?id=3340979, and 
                        restaurants https://www.cs.utexas.edu/users/ml/riddle/data.html
                        
 Labeling algorithm based on 
