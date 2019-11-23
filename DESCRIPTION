@@ -1,0 +1,15 @@
+Package: skyex
+Type: Package
+Title: SkyEx
+Version: 0.1.0
+Author: Suela Isaj
+Maintainer: Suela Isaj <suela@cs.aau.dk>
+Description: Pair labeling for entity resolution problems using Pareto Ranking
+License:
+Encoding: UTF-8
+LazyData: TRUE
+Depends: rPref, dplyr, fields, rgl, plot3D, smoother, fuzzyjoin,
+        stringr, stringdist, geosphere, reticulate, pracma
+RoxygenNote: 6.1.1
+NeedsCompilation: no
+Packaged: 2019-11-23 12:29:44 UTC; suela
