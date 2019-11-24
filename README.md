@@ -1,4 +1,4 @@
-skyex package
+## skyex package
 
 How to install the package?
 
@@ -12,19 +12,21 @@ install_github("suelai/skyex")
 library(skyex)
 ```
 
-And that was it! :)
+And that was it! :smiley:
 
 includes two datasets: pairsManual https://dl.acm.org/citation.cfm?id=3340979, and 
                        restaurants https://www.cs.utexas.edu/users/ml/riddle/data.html
                        
-Labeling algorithm based on 
+Labeling algorithm based on:
+
 [1]Isaj, Suela, Esteban Zimányi, and Torben Bach Pedersen. "Multi-Source Spatial Entity Linkage." Proceedings of the 16th International Symposium on Spatial and Temporal Databases. ACM, 2019.
 APA	
+
 [2]Isaj, Suela, Torben Bach Pedersen, and Esteban Zimányi."Multi-Source Spatial Entity Linkage."  https://arxiv.org/pdf/1911.09016v1.pdf
 
 Includes 16 functions:
 
-|Module	                 |               Function name |
+|**Module**                |               **Function name** |
 | --- | --- |
 |Blocking	               |             textual_blocking |
 |Blocking	               |             spatial_blockcing |
