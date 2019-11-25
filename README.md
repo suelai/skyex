@@ -19,10 +19,10 @@ includes two datasets: pairsManual https://dl.acm.org/citation.cfm?id=3340979, a
                        
 Labeling algorithm based on:
 
-[1]Isaj, Suela, Esteban Zimányi, and Torben Bach Pedersen. "Multi-Source Spatial Entity Linkage." Proceedings of the 16th International Symposium on Spatial and Temporal Databases. ACM, 2019.
+[1] Suela Isaj, Esteban Zimányi, and Torben Bach Pedersen. *"Multi-Source Spatial Entity Linkage."* Proceedings of the 16th International Symposium on Spatial and Temporal Databases. *SSTD* ACM, 2019.
 APA	
 
-[2]Isaj, Suela, Torben Bach Pedersen, and Esteban Zimányi."Multi-Source Spatial Entity Linkage."  https://arxiv.org/pdf/1911.09016v1.pdf
+[2] Suela Isaj, Torben Bach Pedersen, and Esteban Zimányi.*"Multi-Source Spatial Entity Linkage."*  https://arxiv.org/pdf/1911.09016v1.pdf
 
 Includes 16 functions:
 
