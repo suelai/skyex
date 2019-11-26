@@ -41,6 +41,7 @@ Includes 16 functions:
 |Analysis and visualization	 |         plot.skyexd.cutoffs |
 |Analysis and visualization	 |         plot.skyexd.smooth |
 |Analysis and visualization	 |         evaluate.skyex |
+|Analysis and visualization	 |         block.positives.coverage |
 |Analysis and visualization	 |         plot.pairs2D |
 |Analysis and visualization	 |         plot.pairs3D |
 |Analysis and visualization	 |         plot.pairs.interactive.3D |

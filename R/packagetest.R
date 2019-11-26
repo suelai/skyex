@@ -212,6 +212,7 @@ plot.skyexd.cutoffs <- function(skyexd.obj, xlab, ylab){
        xlab = xlab, ylab=ylab, cex.axis=1.3, cex.lab=1.3)
   abline(h=0.0, lty = 2, lwd=1, col=1)
   abline(v = skyexd.obj$k, lty = 1, lwd=1, col=2)
+  axis(3, at=skyexd.obj$k,labels=skyexd.obj$k, col.axis="red", las=1, cex.axis=0.9)
 
 }
 
@@ -258,6 +259,27 @@ evaluate.skyex <- function(prediction, labels, posclass){
             fmeasure = f)
   class(e) <- "eval"
   return (e)
+}
+
+#' @title Check the quality of the blocking
+#' @description Measures the coverage of the ground truth positives in the blocking
+
+#' @param ground.truth A dataframe of the ground truth pairs
+#' @param label.ground.truth The name of the column that contains the ground truth
+#' @param blocks A dataframe of pairs produced from the blocking
+#' @param posclass How is the positive class expressed (e.g. 1)
+
+
+#' @return coverage A value [0,1] showing the coverage of positives in the blocking.
+#'
+#' @export
+
+block.positives.coverage <- function(ground.truth, label.ground.truth,
+                                     blocks, posclass){
+  groundpos<-subset(ground.truth, ground.truth[[label.ground.truth]]==posclass)
+  drops <- c(label.ground.truth)
+  discover <-as.numeric(nrow(inner_join(groundpos[ , !(names(groundpos) %in% drops)], blocks)))
+  return(discover/nrow(groundpos))
 }
 
 
@@ -768,7 +790,7 @@ prefix.blocking <- function(data, column, prefix_size) {
 #' @export
 
 
-suffix_blocking <- function(data, column, suffix_size) {
+suffix.blocking <- function(data, column, suffix_size) {
   if(is.null(column)) {
     stop('select the column for suffix blocking')
   }
@@ -826,7 +848,7 @@ text.similarity <- function (data,method, column1, column2){
          levenshtein={
 
            return(1 - (stringdist(data[[column1]], data[[column2]],
-                                  method = 'lv')/max(nchar(data[[column1]]),
+                                  method = 'lv')/mapply(max,nchar(data[[column1]]),
                                                      nchar( data[[column2]]))))
          },
          cosine={
@@ -988,21 +1010,6 @@ semantic.similarity <- function (data, column1, column2, pythonpath, method){
 
 
 
-#' Dataset of automatically labeled pairs of spatial entities that are at most 50 m far from each other
-#'
-#' @docType data
-#'
-#' @usage data(pairs50)
-#'
-#'
-#' @keywords datasets
-#'
-#' @references Isaj, Suela, Esteban Zimányi, and Torben Bach Pedersen. "Multi-Source Spatial Entity Linkage." Proceedings of the 16th International Symposium on Spatial and Temporal Databases. ACM, 2019.
-
-#'
-#' @examples
-#' data(pairs50)
-#'
 #'
 #' #' Dataset of manually labeled pairs of spatial entities
 #'
