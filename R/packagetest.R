@@ -664,7 +664,7 @@ textual.blocking <- function(data, column, method, max_distance) {
          }
   )
 
-  blocks<- subset(blocks, blocks$row.x!=blocks$row.y)
+  blocks<- subset(blocks, blocks$row.x<blocks$row.y)
   blocks<- subset(blocks, select=-c(row.x,row.y))
 
   return(blocks)
@@ -710,7 +710,7 @@ spatial.blocking <- function(data, longitude, latitude, max_distance) {
                          by=c(longitude, latitude), method="haversine",
                          max_dist = max_distance/1000,
                          unit = "km")
-  blocks<- subset(blocks, blocks$row.x!=blocks$row.y)
+  blocks<- subset(blocks, blocks$row.x<blocks$row.y)
   blocks<- subset(blocks, select=-c(row.x,row.y))
 
   return(blocks)
@@ -748,7 +748,7 @@ prefix.blocking <- function(data, column, prefix_size) {
   data$row <- rownames(data)
   data$prefix<-substring(data[[column]], 1, prefix_size)
   blocks<-merge(x=data, y=data, by="prefix")
-  blocks<- subset(blocks, blocks$row.x!=blocks$row.y)
+  blocks<- subset(blocks, blocks$row.x<blocks$row.y)
   blocks<- subset(blocks, select=-c(row.x,row.y))
   blocks <- subset(blocks, select=-c(prefix))
   return(blocks)
@@ -787,7 +787,7 @@ suffix_blocking <- function(data, column, suffix_size) {
                        -1)
 
   blocks<-merge(x=data, y=data, by="suffix")
-  blocks<- subset(blocks, blocks$row.x!=blocks$row.y)
+  blocks<- subset(blocks, blocks$row.x<blocks$row.y)
   blocks<- subset(blocks, select=-c(row.x,row.y))
   blocks <- subset(blocks, select=-c(suffix))
 
