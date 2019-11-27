@@ -29,7 +29,7 @@ Includes 16 functions:
 |**Module**                |               **Function name** |
 | --- | --- |
 |Blocking	               |             textual_blocking |
-|Blocking	               |             spatial_blockcing |
+|Blocking	               |             spatial_blocking |
 |Blocking	               |             prefix_blocking |
 |Blocking	               |             suffix_blocking |
 |Pairwise comparison	   |               text_similarity |
