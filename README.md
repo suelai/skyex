@@ -24,7 +24,7 @@ APA
 
 [2] Suela Isaj, Torben Bach Pedersen, and Esteban Zimányi.*"Multi-Source Spatial Entity Linkage."*  https://arxiv.org/pdf/1911.09016v1.pdf
 
-Includes 16 functions:
+Includes 17 functions:
 
 |**Module**                |               **Function name** |
 | --- | --- |
